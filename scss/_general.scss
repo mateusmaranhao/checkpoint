@@ -46,7 +46,7 @@ nav {
 h2 {
   @include type-1(36);
   font-weight: 500;
-  margin-top: 6rem;
+  margin-top: 4rem;
 
   &::before {
     content: "";
@@ -55,15 +55,16 @@ h2 {
     height: 3px;
     background: $emphasis;
     margin: 10px auto;
+    padding-right: 10px;
   }
 }
 
-.review {
+.review, .news {
   display: flex;
   justify-content: space-between;
 }
 
-.game {
+.card {
   height: 25rem;
   width: 19.875rem;
 
@@ -71,11 +72,11 @@ h2 {
   margin-top: 1.875rem;  
 }
 
-.tlou2 {
+.game1 {
   background: url("../assets/analise01-home.png") no-repeat;
 }
 
-.gow {
+.game2 {
   background: url("../assets/analise02-home.png") no-repeat;
   background-size: 19.813rem;
 
@@ -84,11 +85,11 @@ h2 {
   }
 }
 
-.rdr2 {
+.game3 {
   background: url("../assets/analise03-home.png") no-repeat;
   background-size: 19.875rem;
 }
-.aco {
+.game4 {
   background: url("../assets/analise04-home.png") no-repeat;
   background-size: 19.875rem;
 }
@@ -133,10 +134,34 @@ h2 {
 }
 
 .line::before {
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 1px;
-    background: $line;
-    margin: 1.5rem auto 0;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: $line;
+  margin: 1.5rem auto 0;
+}
+
+.news1 {
+  background: url("../assets/noticia01-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news2 {
+  background: url("../assets/noticia02-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news3 {
+  background: url("../assets/noticia03-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+.news4 {
+  background: url("../assets/noticia04-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5rem 0;
 }

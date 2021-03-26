@@ -602,7 +602,7 @@ nav a:hover {
 h2 {
   font-size: 2.25rem;
   font-weight: 500;
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 h2::before {
@@ -612,39 +612,40 @@ h2::before {
   height: 3px;
   background: #6C48B8;
   margin: 10px auto;
+  padding-right: 10px;
 }
 
-.review {
+.review, .news {
   display: flex;
   justify-content: space-between;
 }
 
-.game {
+.card {
   height: 25rem;
   width: 19.875rem;
   padding: 0.938rem;
   margin-top: 1.875rem;
 }
 
-.tlou2 {
+.game1 {
   background: url("../assets/analise01-home.png") no-repeat;
 }
 
-.gow {
+.game2 {
   background: url("../assets/analise02-home.png") no-repeat;
   background-size: 19.813rem;
 }
 
-.gow .name {
+.game2 .name {
   padding-top: 19.71rem;
 }
 
-.rdr2 {
+.game3 {
   background: url("../assets/analise03-home.png") no-repeat;
   background-size: 19.875rem;
 }
 
-.aco {
+.game4 {
   background: url("../assets/analise04-home.png") no-repeat;
   background-size: 19.875rem;
 }
@@ -691,5 +692,30 @@ h2::before {
   height: 1px;
   background: #808080;
   margin: 1.5rem auto 0;
+}
+
+.news1 {
+  background: url("../assets/noticia01-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news2 {
+  background: url("../assets/noticia02-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news3 {
+  background: url("../assets/noticia03-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news4 {
+  background: url("../assets/noticia04-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1.5rem 0;
 }
 /*# sourceMappingURL=style.css.map */
