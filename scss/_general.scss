@@ -9,6 +9,10 @@ body {
   box-sizing: border-box;
 }
 
+a{
+  text-decoration: none;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -20,7 +24,6 @@ header {
 
 nav {
   a {
-    text-decoration: none;
     padding-left: 1.563rem;
 
     font-size: 1.125rem;
@@ -38,4 +41,102 @@ nav {
   bottom: 380px;
   text-align: center;
   height: calc(550px - 380px);
+}
+
+h2 {
+  @include type-1(36);
+  font-weight: 500;
+  margin-top: 6rem;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 3px;
+    background: $emphasis;
+    margin: 10px auto;
+  }
+}
+
+.review {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game {
+  height: 25rem;
+  width: 19.875rem;
+
+  padding: 0.938rem;
+  margin-top: 1.875rem;  
+}
+
+.tlou2 {
+  background: url("../assets/analise01-home.png") no-repeat;
+}
+
+.gow {
+  background: url("../assets/analise02-home.png") no-repeat;
+  background-size: 19.813rem;
+
+  .name {
+    padding-top: 19.71rem;
+  }
+}
+
+.rdr2 {
+  background: url("../assets/analise03-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+.aco {
+  background: url("../assets/analise04-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.grade {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 0;
+  border-radius: 20px;
+
+  font-weight: 700;
+  color: $secondary-color;
+
+  width: 75px;
+  background: $emphasis;
+
+  img {
+    padding-right: 10px;
+  }
+}
+
+.name {
+  padding-top: 18rem;
+
+  @include type-1(24);
+  font-weight: 500;
+  color: $secondary-color;
+}
+
+.see-all {
+  color: $emphasis;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  margin-top: 1.5rem;
+  @include type-1(14);
+  line-height: 0;
+
+  text-align: end;
+}
+
+.line::before {
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: $line;
+    margin: 1.5rem auto 0;
 }

@@ -1,3 +1,27 @@
 $primary-color: #232324;
 $secondary-color: #d3d3d3;
+
 $emphasis: #6C48B8;
+$line: #808080;
+
+@mixin type-1($size) {
+  @if $size == (14) {
+    font-size: 0.875em;
+    line-height: 1.250em;
+  }
+  @else if $size == (18) {
+    font-size: 1.125em;
+    line-height: 1.563em;
+  }
+  @else if $size == (24) {
+    font-size: 1.5rem;
+    line-height: 1.2em;
+  }
+  @else if $size == (36) {
+    font-size: 2.25rem;
+  }
+  @else if $size == (40) {
+    font-size: 2.500em;
+    line-height: 2.500em;
+  }
+}
