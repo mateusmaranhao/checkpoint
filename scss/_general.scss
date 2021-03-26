@@ -32,3 +32,10 @@ nav {
     }
   }
 }
+
+.slide {
+  position: relative;
+  bottom: 380px;
+  text-align: center;
+  height: calc(550px - 380px);
+}

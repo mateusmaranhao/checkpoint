@@ -588,4 +588,11 @@ nav a {
 nav a:hover {
   color: #6C48B8;
 }
+
+.slide {
+  position: relative;
+  bottom: 380px;
+  text-align: center;
+  height: calc(550px - 380px);
+}
 /*# sourceMappingURL=style.css.map */
