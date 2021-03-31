@@ -592,16 +592,19 @@ nav a:hover {
   color: #6C48B8;
 }
 
-.slide {
-  position: relative;
-  bottom: 380px;
-  text-align: center;
-  height: calc(550px - 380px);
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
 }
 
 h2 {
   font-size: 2.25rem;
   font-weight: 500;
+  margin-top: -5rem;
+}
+
+h2.mt-4 {
   margin-top: 4rem;
 }
 
@@ -615,9 +618,135 @@ h2::before {
   padding-right: 10px;
 }
 
-.review, .news {
+.wave {
+  position: relative;
+}
+
+.wave img {
+  position: absolute;
+}
+
+/* ========== SLIDE ========== */
+.slider {
+  width: 69.063rem;
+  height: 36.875rem;
+  position: relative;
+  bottom: 150px;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
   display: flex;
-  justify-content: space-between;
+  width: 500%;
+  position: absolute;
+  bottom: 0;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 1s;
+}
+
+.slide .name {
+  color: #d3d3d3;
+  padding: 0;
+  position: relative;
+  bottom: 50px;
+}
+
+.slide .name.n1 {
+  right: 60px;
+}
+
+.slide .name.n2 {
+  right: 226px;
+}
+
+.slide .name.n3 {
+  right: 151px;
+}
+
+/* ========== Manual Nav ========== */
+.navigation-manual {
+  position: absolute;
+  width: 69.063rem;
+  margin-top: 35.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #6C48B8;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 2.5rem;
+}
+
+.manual-btn:hover {
+  background-color: #6C48B8;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* ========== Auto Nav ========== */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 69.063rem;
+  margin-top: 35.5rem;
+}
+
+.navigation-auto div {
+  border: 2px solid #6C48B8;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #6C48B8;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #6C48B8;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #6C48B8;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #6C48B8;
 }
 
 .card {
@@ -625,6 +754,14 @@ h2::before {
   width: 19.875rem;
   padding: 0.938rem;
   margin-top: 1.875rem;
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+/* ========== REVIEW ========== */
+.review, .news {
+  display: flex;
+  justify-content: space-between;
 }
 
 .game1 {
@@ -633,7 +770,7 @@ h2::before {
 
 .game2 {
   background: url("../assets/analise02-home.png") no-repeat;
-  background-size: 19.813rem;
+  background-size: 19.875rem;
 }
 
 .game2 .name {
@@ -647,7 +784,7 @@ h2::before {
 
 .game4 {
   background: url("../assets/analise04-home.png") no-repeat;
-  background-size: 19.875rem;
+  background-size: 20rem;
 }
 
 .grade {
@@ -674,6 +811,27 @@ h2::before {
   color: #d3d3d3;
 }
 
+/* ========== NEWS ========== */
+.news1 {
+  background: url("../assets/noticia01-home.png") no-repeat;
+  background-size: 20rem;
+}
+
+.news2 {
+  background: url("../assets/noticia02-home.png") no-repeat;
+  background-size: 20rem;
+}
+
+.news3 {
+  background: url("../assets/noticia03-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+
+.news4 {
+  background: url("../assets/noticia04-home.png") no-repeat;
+  background-size: 20rem;
+}
+
 .see-all {
   color: #6C48B8;
   font-weight: 500;
@@ -694,26 +852,7 @@ h2::before {
   margin: 1.5rem auto 0;
 }
 
-.news1 {
-  background: url("../assets/noticia01-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
-.news2 {
-  background: url("../assets/noticia02-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
-.news3 {
-  background: url("../assets/noticia03-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
-.news4 {
-  background: url("../assets/noticia04-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
+/* ========== FOOTER ========== */
 .copyright {
   text-align: center;
   padding: 1.5rem 0;

@@ -36,17 +36,20 @@ nav {
   }
 }
 
-.slide {
-  position: relative;
-  bottom: 380px;
-  text-align: center;
-  height: calc(550px - 380px);
+.navigation {
+  position: absolute;
+  display: flex;
+  align-items: center;
 }
 
 h2 {
   @include type-1(36);
   font-weight: 500;
-  margin-top: 4rem;
+  margin-top: -5rem;
+  
+  &.mt-4 {
+    margin-top: 4rem;
+  }
 
   &::before {
     content: "";
@@ -58,10 +61,145 @@ h2 {
     padding-right: 10px;
   }
 }
+.wave {
+  position: relative;
+  img {
+    position: absolute;
+  }
+}
 
-.review, .news {
+/* ========== SLIDE ========== */
+.slider {
+  width: 69.063rem;
+  height: 36.875rem;
+
+  position: relative;
+  bottom: 150px;
+ 
+  margin: auto;
+
+  text-align: center;
+  overflow: hidden;
+}
+
+.slides {
   display: flex;
-  justify-content: space-between;
+  width: 500%;
+  
+  position: absolute;
+  bottom: 0;
+
+  input {
+    display: none;
+  }
+}
+
+.slide {
+  width: 20%;
+
+  transition: 1s;
+
+  .name {
+    color: $secondary-color;
+    padding: 0;
+
+    position: relative;
+    bottom: 50px;
+    &.n1 {
+      right: 60px;
+    }
+
+    &.n2 {
+      right: 226px;
+    } 
+    
+    &.n3 {
+      right: 151px
+    }
+  }
+}
+
+/* ========== Manual Nav ========== */
+.navigation-manual {
+  position: absolute;
+  width: 69.063rem;
+  margin-top: 35.5rem;
+
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #6C48B8;
+  border-radius: 10px;
+
+  padding: 5px;
+
+  cursor: pointer;
+
+  transition: 1s;
+
+  &:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+
+  &:hover {
+    background-color: #6C48B8;
+  }
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* ========== Auto Nav ========== */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+
+  width: 69.063rem;
+  margin-top: 35.5rem;
+}
+.navigation-auto div {
+  border: 2px solid #6C48B8;
+
+  padding: 5px;
+  border-radius: 10px;
+
+  transition: 1s;
+
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: $emphasis;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: $emphasis;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: $emphasis;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: $emphasis;
 }
 
 .card {
@@ -69,7 +207,17 @@ h2 {
   width: 19.875rem;
 
   padding: 0.938rem;
-  margin-top: 1.875rem;  
+  margin-top: 1.875rem; 
+
+  border-radius: 20px;
+
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+} 
+
+/* ========== REVIEW ========== */
+.review, .news {
+  display: flex;
+  justify-content: space-between;
 }
 
 .game1 {
@@ -78,7 +226,7 @@ h2 {
 
 .game2 {
   background: url("../assets/analise02-home.png") no-repeat;
-  background-size: 19.813rem;
+  background-size: 19.875rem;
 
   .name {
     padding-top: 19.71rem;
@@ -91,7 +239,7 @@ h2 {
 }
 .game4 {
   background: url("../assets/analise04-home.png") no-repeat;
-  background-size: 19.875rem;
+  background-size: 20rem;
 }
 
 .grade {
@@ -121,6 +269,27 @@ h2 {
   color: $secondary-color;
 }
 
+
+/* ========== NEWS ========== */
+.news1 {
+  background: url("../assets/noticia01-home.png") no-repeat;
+  background-size: 20rem;
+}
+
+.news2 {
+  background: url("../assets/noticia02-home.png") no-repeat;
+  background-size: 20rem;
+}
+
+.news3 {
+  background: url("../assets/noticia03-home.png") no-repeat;
+  background-size: 19.875rem;
+}
+.news4 {
+  background: url("../assets/noticia04-home.png") no-repeat;
+  background-size: 20rem;
+}
+
 .see-all {
   color: $emphasis;
   font-weight: 500;
@@ -142,25 +311,7 @@ h2 {
   margin: 1.5rem auto 0;
 }
 
-.news1 {
-  background: url("../assets/noticia01-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
-.news2 {
-  background: url("../assets/noticia02-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
-.news3 {
-  background: url("../assets/noticia03-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-.news4 {
-  background: url("../assets/noticia04-home.png") no-repeat;
-  background-size: 19.875rem;
-}
-
+/* ========== FOOTER ========== */
 .copyright {
   text-align: center;
   padding: 1.5rem 0;

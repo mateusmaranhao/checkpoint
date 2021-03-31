@@ -14,7 +14,9 @@
 
 <body>
   <header class="header">
-    <img src="./assets/logo.svg" alt="logo do site">
+    <a href="./index.html">
+      <img src="./assets/logo.svg" alt="logo do site">
+    </a>
 
     <nav>
       <ul>
@@ -30,10 +32,58 @@
   <div class="wave"><img src="./assets/dark-waves.svg" alt="wave"></div>
 
   <main>
-    <section class="slide">
-      <div class="container">
-        <img src="./assets/slide-1.jpg" alt="">
+    <section class="container">
+      <div class="slider">
+        <div class="slides">
+          <!-- radio btn start -->
+          <input type="radio" name="radio-btn" id="radio1">
+          <input type="radio" name="radio-btn" id="radio2">
+          <input type="radio" name="radio-btn" id="radio3">
+          <input type="radio" name="radio-btn" id="radio4">
+          <!-- radio btn end -->
+
+          <!-- slide image start -->
+          <div class="slide first">
+            <img src="./assets/slide-1.jpg" alt="">
+            <h3 class="name n1">Fantasma de Tsushima terá filme dirigido pelo mesmo diretor de John Wick</h3>
+          </div>
+
+          <div class="slide">
+            <img src="./assets/slide-2.jpg" alt="">
+            <h3 class="name n2">Jogos da Inseto Suave com até 80% de desconto</h3>
+          </div>
+
+          <div class="slide">
+            <img src="./assets/slide-3.jpg" alt="">
+            <h3 class="name n3">Horizon Zero Dawn e outros jogos grátis na Estação de Jogos 4/5</h3>
+          </div>
+
+          <div class="slide">
+            <img src="./assets/slide-4.png" alt="">
+            <h3 class="name n3">Lista dos jogos gratuitos da Prime Gaming de Abril é divulgada</h3>
+          </div>
+          <!-- slide image end -->
+        </div>
+
+        <!-- auto nav start -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!-- auto nav end -->
+
+        <!-- manual nav start -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manual-btn"></label>
+          <label for="radio2" class="manual-btn"></label>
+          <label for="radio3" class="manual-btn"></label>
+          <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!-- manual nav end -->
       </div>
+      <!-- slider end -->
     </section>
 
     <section>
@@ -83,7 +133,7 @@
 
     <section>
       <div class="container">
-        <h2>Notícias</h2>
+        <h2 class="mt-4">Notícias</h2>
 
         <div class="news">
           <a href="#" class="card news1">
@@ -116,6 +166,18 @@
       <a href="https://www.instagram.com/mateuscesar_/" target="_blank">MATEUS MARANHÃO</a>
     </div>
   </footer>
+
+  <script type="text/javascript">
+    var counter = 1;
+
+    setInterval(function () {
+      document.getElementById('radio' + counter).checked = true;
+      counter++
+      if (counter > 4) {
+        counter = 1;
+      }
+    }, 5000)
+  </script>
 </body>
 
 </html>
