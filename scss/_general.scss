@@ -18,8 +18,13 @@ header {
   align-items: center;
   justify-content: space-around;
 
-  background: $primary-color;
+  
   padding: 1.25rem 0 15.625rem;
+  background: $primary-color;
+
+  &.header {
+    padding-bottom: 29.563rem;
+  }
 }
 
 nav {
@@ -61,6 +66,7 @@ h2 {
     padding-right: 10px;
   }
 }
+
 .wave {
   position: relative;
   img {
@@ -315,4 +321,57 @@ h2 {
 .copyright {
   text-align: center;
   padding: 1.5rem 0;
+}
+
+/* ========== GRID ========== */
+h3 {
+  color: $secondary-color;
+  font-weight: 700;
+
+  @include type-1(24)
+}
+
+.grid {
+  display: grid;
+
+  position: relative;
+  bottom: 364px;
+
+  width: 1114px;
+  margin: auto; 
+  
+  grid-template-columns: 1fr 2fr;
+
+  gap: 20px;
+  grid-template-areas: 
+  "item1 item2"
+  "item1 item3";
+  ;
+
+  img {
+    border-radius: 15px;
+  }
+}
+
+.subgrid {
+  display: grid;
+  grid-template-columns: 205px 225px;
+  gap: 20px;
+
+  align-items: center;
+}
+
+.i1 {
+  grid-area: item1;
+  height: 320px;
+}
+
+.i2 {
+  grid-area: item2;
+  height: 150px;
+}
+
+.i3 {
+  grid-area: item3;
+  height: 150px;
 }
