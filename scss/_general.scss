@@ -39,6 +39,10 @@ nav {
       color: $emphasis;
     }
   }
+
+  .active {
+    color: $emphasis;
+  }
 }
 
 .navigation {
@@ -338,15 +342,14 @@ h3 {
   bottom: 364px;
 
   width: 1114px;
-  margin: auto; 
-  
+  margin: auto;
+
   grid-template-columns: 1fr 2fr;
 
   gap: 20px;
   grid-template-areas: 
   "item1 item2"
   "item1 item3";
-  ;
 
   img {
     border-radius: 15px;

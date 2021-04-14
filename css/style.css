@@ -596,6 +596,10 @@ nav a:hover {
   color: #6C48B8;
 }
 
+nav .active {
+  color: #6C48B8;
+}
+
 .navigation {
   position: absolute;
   display: flex;
